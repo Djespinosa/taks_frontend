@@ -1,27 +1,85 @@
-# TaskManager
+# Gestor de Tareas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.19.
+Una aplicación web moderna para gestionar tareas, construida con Angular y Tailwind CSS.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Lista de tareas con estado de completado
+- Formulario para agregar nuevas tareas
+- Capacidad para marcar tareas como completadas
+- Eliminación de tareas
+- Interfaz responsiva y moderna
+- Integración con backend REST API
 
-## Code scaffolding
+## Requisitos Previos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (versión 18 o superior)
+- npm (incluido con Node.js)
+- Angular CLI (`npm install -g @angular/cli`)
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clonar el repositorio:
+```bash
+git clone <url-del-repositorio>
+cd task-manager
+```
 
-## Running unit tests
+2. Instalar dependencias:
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Iniciar el servidor de desarrollo:
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+4. Abrir el navegador en `http://localhost:4200`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Estructura del Proyecto
 
-## Further help
+- `src/app/components/`: Componentes de la aplicación
+  - `task-list/`: Componente principal que muestra la lista de tareas
+  - `task-item/`: Componente para mostrar una tarea individual
+  - `add-task-form/`: Formulario para agregar nuevas tareas
+- `src/app/services/`: Servicios de la aplicación
+  - `task.service.ts`: Servicio para manejar las operaciones CRUD de tareas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tecnologías Utilizadas
+
+- Angular 18
+- Tailwind CSS 4.1.5
+- TypeScript
+- RxJS para manejo de estado reactivo
+
+## API Endpoints
+
+La aplicación se conecta a un backend REST API en `localhost:8000` con los siguientes endpoints:
+
+- GET /tasks: Obtener todas las tareas
+- POST /tasks: Crear una nueva tarea
+- PUT /tasks/{task_id}: Actualizar el estado de una tarea
+- DELETE /tasks/{task_id}: Eliminar una tarea
+
+## Desarrollo
+
+Para ejecutar la aplicación en modo desarrollo:
+
+```bash
+ng serve
+```
+
+Para construir la aplicación para producción:
+
+```bash
+ng build
+```
+
+## Contribuir
+
+1. Fork el repositorio
+2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request
