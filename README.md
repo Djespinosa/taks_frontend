@@ -21,7 +21,7 @@ Una aplicación web moderna para gestionar tareas, construida con Angular y Tail
 
 1. Clonar el repositorio:
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/Djespinosa/taks_frontend.git
 cd task-manager
 ```
 
